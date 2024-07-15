@@ -1,5 +1,5 @@
-# Ensure you have the appropriate import for your YOLOv10 implementation
-from ultralytics import YOLOv10
+# Ensure you have the appropriate import for your YOLO implementation
+from ultralytics import YOLO
 import requests
 from io import BytesIO
 from PIL import Image
@@ -14,7 +14,7 @@ import pandas as pd
 class DetectObject:
     def __init__(self, model_path):
         model_path = 'best.pt'
-        self.model = YOLOv10(model_path)
+        self.model = YOLO(model_path)
         self.IMG_SIZE = 640
 
     def detect_image(self, url, threshold):
